@@ -28,7 +28,7 @@ const screenshot = (url, callback, error) => {
 
         image_name = url.replace(/\W/g, '') + '.png'
 
-        await page.screenshot({ path: (IMAGE_FOLDER + image_name) });
+        await page.screenshot({ path: (IMAGE_FOLDER + image_name), fullPage: true });
 
         callback(image_name)
     })()
